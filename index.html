@@ -16,7 +16,7 @@
         .header{
             width: 70%;
             margin: 0 auto;
-            display: flex;
+            display: block;
         }
 
         .container {
@@ -29,7 +29,7 @@
         }
 
         h1 {
-            font-size: 20px;                     /* 見出しの文字サイズ */
+            font-size: clamp(0.8rem, 1.7vw, 2.5rem);                     /* 見出しの文字サイズ */
             margin-bottom: 10px;                 /* 下の余白 */
         }
 
@@ -50,7 +50,7 @@
             font-weight: bold;
             white-space: nowrap;
             text-align: center;
-            font-size: clamp(0.5rem, 1.7vw, 2.0rem);
+            font-size: clamp(0.5rem, 1.7vw, 1.6rem);
 
             display: block;                      /* 行全体をクリックできるようにする */
             padding: 20px;                  /* 内側の余白 */
@@ -69,7 +69,7 @@
             vertical-align: middle;
             content: "";
             display: inline-block;
-            margin: auto;
+            margin: 3%;
             width: 20%;
         }
 
@@ -81,9 +81,9 @@
             font-family: "Noto Sans JP", sans-serif; 
             background-color: #ebebeb;
             padding: 20px;
-            margin: 10px;
+            margin: 2%;
             display: inline-block;
-            font-size: clamp(0.8rem, 1.7vw, 2.5rem);
+            font-size: clamp(0.8rem, 1.7vw, 1.6rem);
         }
 
         .board{
@@ -101,18 +101,18 @@
     </style>
 </head>
 <body>
-    <img src="../img/noteサムネ.png" class="header">
+    <img src="img/headerimage.png" class="header">
 
     <div class="container">
 
         <div style="position: relative;">
-            <img src="../img/board.png" class="board" >
-            <img src="../img/pin.png" class="pin" id="pin" >
+            <img src="img/board.png" class="board" >
+            <img src="img/pin.png" class="pin" id="pin" >
 
             <script src="script.js"></script>
         </div>
 
-        <img src="../img/content.png" width="100%" style="margin-bottom: 40px;">
+        <img src="img/content.png" width="100%" style="margin-bottom: 40px;">
 
         <h1>
             -SNS
@@ -161,7 +161,7 @@
             -Profile
         </h1>
 
-        <img src="../img/profile画像.png" alt="test" class="profile-image">
+        <img src="img/profile.png" alt="test" class="profile-image">
         
         <p class="prpfile-text">
             創るのが好きな人<br>
