@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <title>言葉空</title>
@@ -8,13 +9,17 @@
     <!-- ページ全体の見た目を整えるCSS -->
     <style>
         body {
-            font-family: "Noto Sans JP", sans-serif; /* 文字の種類 */
-            background-color: #000096;           /* 背景色 */
-            margin: 0;                           /* 余白をなくす */
-            padding: 20px;                       /* 内側の余白 */
+            font-family: "Noto Sans JP", sans-serif;
+            /* 文字の種類 */
+            background-color: #000096;
+            /* 背景色 */
+            margin: 0;
+            /* 余白をなくす */
+            padding: 20px;
+            /* 内側の余白 */
         }
 
-        .header{
+        .header {
             max-width: 700px;
             width: 80%;
             margin: 0 auto;
@@ -22,24 +27,34 @@
         }
 
         .container {
-            max-width: 700px;                    /* 横幅の最大値 */
-            margin: 0 auto;                      /* 中央寄せ */
-            background-color: #ffffff;           /* コンテンツ部分の背景色 */
-            padding: 20px;                       /* コンテンツ内の余白 */
-            border-radius: 8px;                  /* 角を少し丸くする */
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 影をつける */
+            max-width: 700px;
+            /* 横幅の最大値 */
+            margin: 0 auto;
+            /* 中央寄せ */
+            background-color: #ffffff;
+            /* コンテンツ部分の背景色 */
+            padding: 20px;
+            /* コンテンツ内の余白 */
+            border-radius: 8px;
+            /* 角を少し丸くする */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            /* 影をつける */
         }
 
         h1 {
-            font-size: clamp(0.9rem, 1.7vw, 2.5rem);                     /* 見出しの文字サイズ */
-            margin-bottom: 10px;                 /* 下の余白 */
+            font-size: clamp(0.9rem, 1.7vw, 2.5rem);
+            /* 見出しの文字サイズ */
+            margin-bottom: 10px;
+            /* 下の余白 */
         }
 
         .link-list {
             display: grid;
-            grid-template-columns: repeat(4,1fr);
-            list-style: none;                    /* 箇条書きの点を消す */
-            padding: 0;                          /* 内側の余白をゼロに */
+            grid-template-columns: repeat(4, 1fr);
+            list-style: none;
+            /* 箇条書きの点を消す */
+            padding: 0;
+            /* 内側の余白をゼロに */
         }
 
         .link-list li {
@@ -54,20 +69,28 @@
             text-align: center;
             font-size: clamp(0.7rem, 1.7vw, 2.0rem);
 
-            display: block;                      /* 行全体をクリックできるようにする */
-            padding: 20px;                  /* 内側の余白 */
-            text-decoration: none;               /* 下線を消す */
-            color: #333333;                      /* 文字色 */
-            border-radius: 4px;                  /* 角を少し丸くする */
-            background-color: #e6f1ff;           /* 通常時の背景色 */
-            transition: background-color 0.2s;   /* ホバー時の色変化をなめらかに */
+            display: block;
+            /* 行全体をクリックできるようにする */
+            padding: 20px;
+            /* 内側の余白 */
+            text-decoration: none;
+            /* 下線を消す */
+            color: #333333;
+            /* 文字色 */
+            border-radius: 4px;
+            /* 角を少し丸くする */
+            background-color: #e6f1ff;
+            /* 通常時の背景色 */
+            transition: background-color 0.2s;
+            /* ホバー時の色変化をなめらかに */
         }
 
         .link-list a:hover {
-            background-color: #c0d9ff;           /* マウスを乗せたときの背景色 */
+            background-color: #c0d9ff;
+            /* マウスを乗せたときの背景色 */
         }
 
-        .profile-image{
+        .profile-image {
             vertical-align: middle;
             content: "";
             display: inline-block;
@@ -75,11 +98,11 @@
             width: 20%;
         }
 
-        .prpfile-text{
+        .prpfile-text {
             vertical-align: middle;
             display: inline-block;
             width: 60%;
-            font-family: "Noto Sans JP", sans-serif; 
+            font-family: "Noto Sans JP", sans-serif;
             background-color: #ebebeb;
             padding: 20px;
             margin: 2%;
@@ -87,28 +110,145 @@
             font-size: clamp(0.8rem, 1.7vw, 2.5rem);
         }
 
-        .board{
+        .board {
             width: 100%;
             display: block;
             margin-top: 5%;
         }
 
-        .pin{
+        .pin {
             transform: translate(-50%, -100%);
             width: 20%;
             position: absolute;
         }
 
+
+        @media (max-width:480px) {
+            body {
+                font-family: "Noto Sans JP", sans-serif;
+                /* 文字の種類 */
+                background-color: #000096;
+                /* 背景色 */
+                margin: 0;
+                /* 余白をなくす */
+                padding: 20px;
+                /* 内側の余白 */
+            }
+
+            .header {
+                max-width: 700px;
+                width: 80%;
+                margin: 0 auto;
+                display: block;
+            }
+
+            .container {
+                max-width: 900px;
+                /* 横幅の最大値 */
+                margin: 0 auto;
+                /* 中央寄せ */
+                background-color: #ffffff;
+                /* コンテンツ部分の背景色 */
+                padding: 5px;
+                /* コンテンツ内の余白 */
+                border-radius: 8px;
+                /* 角を少し丸くする */
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                /* 影をつける */
+            }
+
+            h1 {
+                font-size: clamp(0.9rem, 1.7vw, 2.5rem);
+                /* 見出しの文字サイズ */
+                margin-bottom: 10px;
+                /* 下の余白 */
+            }
+
+            .link-list {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                list-style: none;
+                /* 箇条書きの点を消す */
+                padding: 0;
+                /* 内側の余白をゼロに */
+            }
+
+            .link-list li {
+                margin: 10px 5%;
+                max-width: 300px;
+                width: 90%;
+            }
+
+            .link-list a {
+                font-weight: bold;
+                white-space: nowrap;
+                text-align: center;
+                font-size: clamp(0.7rem, 1.7vw, 2.0rem);
+
+                display: block;
+                /* 行全体をクリックできるようにする */
+                padding: 20px;
+                /* 内側の余白 */
+                text-decoration: none;
+                /* 下線を消す */
+                color: #333333;
+                /* 文字色 */
+                border-radius: 4px;
+                /* 角を少し丸くする */
+                background-color: #e6f1ff;
+                /* 通常時の背景色 */
+                transition: background-color 0.2s;
+                /* ホバー時の色変化をなめらかに */
+            }
+
+            .link-list a:hover {
+                background-color: #c0d9ff;
+                /* マウスを乗せたときの背景色 */
+            }
+
+            .profile-image {
+                vertical-align: middle;
+                content: "";
+                display: inline-block;
+                margin: 3%;
+                width: 20%;
+            }
+
+            .prpfile-text {
+                vertical-align: middle;
+                display: inline-block;
+                width: 60%;
+                font-family: "Noto Sans JP", sans-serif;
+                background-color: #ebebeb;
+                padding: 20px;
+                margin: 2%;
+                display: inline-block;
+                font-size: clamp(0.8rem, 1.7vw, 2.5rem);
+            }
+
+            .board {
+                width: 100%;
+                display: block;
+                margin-top: 5%;
+            }
+
+            .pin {
+                transform: translate(-50%, -100%);
+                width: 20%;
+                position: absolute;
+            }
+        }
     </style>
 </head>
+
 <body>
     <img src="img/headerimage.png" class="header">
 
     <div class="container">
 
         <div style="position: relative;">
-            <img src="img/board.png" class="board" >
-            <img src="img/pin.png" class="pin" id="pin" >
+            <img src="img/board.png" class="board">
+            <img src="img/pin.png" class="pin" id="pin">
 
             <script src="script.js"></script>
         </div>
@@ -163,7 +303,7 @@
         </h1>
 
         <img src="img/profile.png" alt="test" class="profile-image">
-        
+
         <p class="prpfile-text">
             創るのが好きな人<br>
             毎週物を作ってあちこちに出している<br>
@@ -171,4 +311,5 @@
         </p>
     </div>
 </body>
+
 </html>
