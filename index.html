@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>言葉空</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" sizes="any">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ページ全体の見た目を整えるCSS -->
     <style>
@@ -123,7 +124,7 @@
         }
 
 
-        @media (max-width:480px) {
+        @media (max-width:400px) {
             body {
                 font-family: "Noto Sans JP", sans-serif;
                 /* 文字の種類 */
@@ -136,20 +137,18 @@
             }
 
             .header {
-                max-width: 700px;
-                width: 80%;
+                width: 100%;
                 margin: 0 auto;
                 display: block;
             }
 
             .container {
-                max-width: 900px;
-                /* 横幅の最大値 */
-                margin: 0 auto;
+                width: 95%;
+                margin:0 auto;
                 /* 中央寄せ */
                 background-color: #ffffff;
                 /* コンテンツ部分の背景色 */
-                padding: 5px;
+                padding: 10px;
                 /* コンテンツ内の余白 */
                 border-radius: 8px;
                 /* 角を少し丸くする */
@@ -166,7 +165,7 @@
 
             .link-list {
                 display: grid;
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(2, 1fr);
                 list-style: none;
                 /* 箇条書きの点を消す */
                 padding: 0;
@@ -174,7 +173,7 @@
             }
 
             .link-list li {
-                margin: 10px 5%;
+                margin: 5px 5%;
                 max-width: 300px;
                 width: 90%;
             }
@@ -210,8 +209,7 @@
                 vertical-align: middle;
                 content: "";
                 display: inline-block;
-                margin: 3%;
-                width: 20%;
+                width: 18%;
             }
 
             .prpfile-text {
@@ -220,21 +218,20 @@
                 width: 60%;
                 font-family: "Noto Sans JP", sans-serif;
                 background-color: #ebebeb;
-                padding: 20px;
-                margin: 2%;
+                padding: 15px;
                 display: inline-block;
-                font-size: clamp(0.8rem, 1.7vw, 2.5rem);
+                font-size: clamp(0.6rem, 1.0vw, 1.0rem);
             }
 
             .board {
                 width: 100%;
                 display: block;
-                margin-top: 5%;
+                margin-top: 10%;
             }
 
             .pin {
                 transform: translate(-50%, -100%);
-                width: 20%;
+                width: 30%;
                 position: absolute;
             }
         }
@@ -253,7 +250,7 @@
             <script src="script.js"></script>
         </div>
 
-        <img src="img/content.png" width="100%" style="margin-top: 5px; margin-bottom: 40px;">
+        <img src="img/content.png" width="100%" style="margin-top: 3px; margin-bottom: 40px;">
 
         <h1>
             -SNS
