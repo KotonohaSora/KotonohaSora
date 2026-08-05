@@ -6,7 +6,7 @@ const positions = {
     1: { top: 64, left: 9.5 },   // げつ
     2: { top: 64, left: 23 },  // 
     3: { top: 64, left: 36.5 },  // 
-    4: { top: 64, left: 56},  // 
+    4: { top: 64, left: 50},  // 
     5: { top: 64, left: 63.5 },  // 
     6: { top: 64, left: 82.5},  // 
     0: { top: 64, left: 96}   // 
